@@ -88,20 +88,5 @@ if __name__ == '__main__':
     for query in query_list:
         QUERY_WORD = query
         log_info("QUERY - %s" % query)
-        # suit = unittest.defaultTestLoader.loadTestsFromTestCase(NewClothPage)
-        # unittest.TextTestRunner().run(suit)
-        # result = unittest.TestResult()
-        # suit(result)
-
-        #testcase = NewClothPage('test01_check_searchable')
-        #testcase.longMessage = True
-        # runner = unittest.TextTestRunner()
-        # runner.run(testcase)
-        testsuite = unittest.TestSuite()
-        testsuite.addTest(NewClothPage('test01_check_searchable'))
-        testsuite.addTest(NewClothPage('test02_check_breadcrumb'))
-        unittest.TextTestRunner().run(testsuite)
-        res = unittest.TestResult()
-        testsuite.run(res)
-        #testsuite(res)
-        print res
+        suit = unittest.defaultTestLoader.loadTestsFromTestCase(NewClothPage)
+        unittest.TextTestRunner().run(suit)
